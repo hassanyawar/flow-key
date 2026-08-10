@@ -54,12 +54,12 @@ This is the highest-risk area for subtle bugs. Build and test it in isolation be
 
 Pure TypeScript, no DOM or React imports. Write tests alongside each function.
 
-- [ ] `KeyStat` and `FingerStat` types per the data model in requirements doc §5.
-- [ ] `recordAttempt(keyStat, correct, latencyMs)`: updates attempts, correct count, latency sum, and the 30-entry ring buffer of recent results.
-- [ ] `rollUpFingerStat(keyStats, finger)`: derives a `FingerStat` (accuracy, avg latency, XP, level 1–10) from its owned keys.
-- [ ] `unlock.ts`: implements the unlock order and threshold from requirements doc §3.2 (95% accuracy over 50 occurrences of every currently-unlocked key). Pure function: given current `KeyStat` state, returns the next key(s) to unlock, if any.
-- [ ] `generator.ts`: weighted drill text generator — 40% weight to weak keys (accuracy below threshold or recently unlocked), 60% general practice, respecting only currently-unlocked keys.
-- [ ] Unit tests: unlock triggers at exactly the threshold and not before, generator's weighting distribution over a large sample matches the 40/60 split within a reasonable tolerance, roll-up math is correct with partial finger data (e.g. a finger with only one key attempted).
+- [x] `KeyStat` and `FingerStat` types per the data model in requirements doc §5.
+- [x] `recordAttempt(keyStat, correct, latencyMs)`: updates attempts, correct count, latency sum, and the 30-entry ring buffer of recent results.
+- [x] `rollUpFingerStat(keyStats, finger)`: derives a `FingerStat` (accuracy, avg latency, XP, level 1–10) from its owned keys.
+- [x] `unlock.ts`: implements the unlock order and threshold from requirements doc §3.2 (95% accuracy over 50 occurrences of every currently-unlocked key). Pure function: given current `KeyStat` state, returns the next key(s) to unlock, if any.
+- [x] `generator.ts`: weighted drill text generator — 40% weight to weak keys (accuracy below threshold or recently unlocked), 60% general practice, respecting only currently-unlocked keys.
+- [x] Unit tests: unlock triggers at exactly the threshold and not before, generator's weighting distribution over a large sample matches the 40/60 split within a reasonable tolerance, roll-up math is correct with partial finger data (e.g. a finger with only one key attempted).
 
 **Done when:** engine test suite covers unlock thresholds, roll-up correctness, and generator weighting, all passing, with no import of React or DOM APIs anywhere in `engine/`.
 
