@@ -1,10 +1,10 @@
-# CLAUDE.md — Ryth
+# CLAUDE.md — Flowtype
 
 This file is instructions for Claude Code working in this repo. Read `TYPING_APP_REQUIREMENTS.md` first — it is the product and architecture spec. This file is about *how* to work, not *what* to build.
 
 ## Project
 
-Ryth is a gamified typing trainer: React + TypeScript + Vite, Canvas 2D for the game surface, Zustand for state, IndexedDB for local persistence. No backend in v1. Full stack rationale is in the requirements doc §2 — don't relitigate it (no game engine, no CSS-in-JS, no WebGL yet).
+Flowtype is a gamified typing trainer: React + TypeScript + Vite, Canvas 2D for the game surface, Zustand for state, IndexedDB for local persistence. No backend in v1. Full stack rationale is in the requirements doc §2 — don't relitigate it (no game engine, no CSS-in-JS, no WebGL yet).
 
 ## Before you start any task
 
