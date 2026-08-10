@@ -34,6 +34,16 @@ These come directly from the requirements doc. Violating them is a bug even if t
 - Run `npm run lint` and `npm run typecheck` before considering a task done. Both must be clean.
 - Commit messages: imperative mood, scoped prefix matching the top-level directory touched (e.g. `engine: fix flow consistency calc for short sessions`).
 
+## Git workflow
+
+This repo follows git-flow: `main` is releases only, `develop` is the integration branch, all work happens on branches cut from `develop`.
+
+- One feature branch per task from `PHASE_1_TASKS.md` (or the equivalent numbered task in a later phase's task doc) — branch as `feature/<short-task-slug>`, e.g. `feature/project-scaffold`, `feature/input-handling`.
+- Don't lump multiple numbered tasks into one branch, even if they touch the same directory — the task doc's dependency ordering exists so each is independently reviewable and revertible.
+- Branch from `develop`, not `main`. Merge back into `develop` only once the task's "Done when" criteria pass (lint/typecheck/tests clean, per Code conventions above).
+- Unless explicitly told otherwise, keep this work local: commit on the feature branch, merge to local `develop`, and stop there. Do not push to `origin` or open a PR without being asked — those are visible to others and need explicit sign-off first.
+- Commit message format is unchanged from the convention below (imperative mood, scoped prefix); this applies per-commit within a feature branch, not just at merge time.
+
 ## Testing expectations
 
 - Every function in `engine/` and `audio/` gets a unit test. This is not optional — these directories are pure and cheap to test, and they're where the actual game behavior lives.
