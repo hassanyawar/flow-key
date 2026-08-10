@@ -8,14 +8,14 @@ Work top to bottom. Each task lists what it depends on and what "done" means. Do
 
 ## 1. Project scaffold
 
-- [ ] Init Vite + React + TypeScript (strict) project.
-- [ ] Install and configure Tailwind CSS.
-- [ ] Install Zustand, `idb`, React Router.
-- [ ] Configure ESLint (`@typescript-eslint` recommended-type-checked) and Prettier.
-- [ ] Configure Vitest + React Testing Library.
-- [ ] Set up `npm run lint`, `npm run typecheck`, `npm run test`, `npm run dev`, `npm run build` scripts.
-- [ ] Create the directory structure from requirements doc §7 (`engine/`, `audio/`, `input/`, `render/`, `components/`, `routes/`, `stores/`, `db/`, `content/`, `test/`) with empty index files so structure is visible from the start.
-- [ ] Add `CLAUDE.md` and `TYPING_APP_REQUIREMENTS.md` to repo root if not already present.
+- [x] Init Vite + React + TypeScript (strict) project.
+- [x] Install and configure Tailwind CSS.
+- [x] Install Zustand, `idb`, React Router.
+- [x] Configure ESLint (`@typescript-eslint` recommended-type-checked) and Prettier.
+- [x] Configure Vitest + React Testing Library.
+- [x] Set up `npm run lint`, `npm run typecheck`, `npm run test`, `npm run dev`, `npm run build` scripts.
+- [x] Create the directory structure from requirements doc §7 (`engine/`, `audio/`, `input/`, `render/`, `components/`, `routes/`, `stores/`, `db/`, `content/`, `test/`) with empty index files so structure is visible from the start.
+- [x] Add `CLAUDE.md` and `TYPING_APP_REQUIREMENTS.md` to repo root if not already present.
 
 **Done when:** `npm run dev` shows a blank app, `npm run lint`/`typecheck`/`test` all pass with zero files to check.
 
@@ -23,11 +23,11 @@ Work top to bottom. Each task lists what it depends on and what "done" means. Do
 
 ## 2. Theme and base layout
 
-- [ ] Define light and dark CSS custom-property sets, applied via `data-theme` on root.
-- [ ] Light is default; respect `prefers-color-scheme` only on first visit (requirements doc §10).
-- [ ] Define the finger-color ramps (teal/left, coral/right) as theme-scoped custom properties — separate values per theme, not shared hex.
-- [ ] Set up the monospace font for typing surfaces and sans font for chrome. Confirm the monospace font keeps a stable character grid (test with a mixed-width string).
-- [ ] Build the app shell: route outlet, minimal top-level nav (routes are `/`, `/play/:mode`, `/stats`, `/settings` — only `/` and `/play/drill` need real content this phase).
+- [x] Define light and dark CSS custom-property sets, applied via `data-theme` on root.
+- [x] Light is default; respect `prefers-color-scheme` only on first visit (requirements doc §10).
+- [x] Define the finger-color ramps (teal/left, coral/right) as theme-scoped custom properties — separate values per theme, not shared hex.
+- [x] Set up the monospace font for typing surfaces and sans font for chrome. Confirm the monospace font keeps a stable character grid (test with a mixed-width string).
+- [x] Build the app shell: route outlet, minimal top-level nav (routes are `/`, `/play/:mode`, `/stats`, `/settings` — only `/` and `/play/drill` need real content this phase).
 
 **Done when:** switching `data-theme` on the root element visibly swaps the whole UI with no unstyled flashes, and both themes pass WCAG AA contrast checks on body text.
 
