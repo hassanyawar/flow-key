@@ -1,8 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home, Layout, Play, Settings, Stats } from './routes';
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <p className="font-sans text-sm text-neutral-500">Flowtype</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="play/:mode" element={<Play />} />
+          <Route path="stats" element={<Stats />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
