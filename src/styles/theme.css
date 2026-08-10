@@ -1,0 +1,66 @@
+/*
+ * Light is the default theme (requirements doc §10). Both selectors are explicit
+ * (rather than relying on a bare :root for light) so the two token sets stay
+ * visibly symmetric here and neither is an implicit fallback.
+ * Finger-ramp hex values are intentionally distinct between themes, not just
+ * lightness-shifted from the same base, so each ramp stays legible on its
+ * own background (requirements doc §10).
+ */
+
+:root {
+  /* Typing surfaces use font-mono; chrome and stats use the font-sans default.
+     Both are system stacks — no webfont download — and don't vary by theme. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-mono:
+    ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo,
+    monospace;
+}
+
+:root,
+[data-theme='light'] {
+  --color-bg: #ffffff;
+  --color-surface: #f4f4f5;
+  --color-text: #18181b;
+  --color-text-muted: #52525b;
+  --color-border: #e4e4e7;
+  --color-accent: #6d28d9;
+  --color-accent-fg: #ffffff;
+
+  /* Left hand: teal ramp, darkest at pinky, lightest at index. */
+  --color-finger-l5: #0f5c56;
+  --color-finger-l4: #147d74;
+  --color-finger-l3: #189d92;
+  --color-finger-l2: #4fc3b8;
+
+  /* Right hand: coral ramp, lightest at index, darkest at pinky. */
+  --color-finger-r2: #ffb199;
+  --color-finger-r3: #ff8a68;
+  --color-finger-r4: #e8623c;
+  --color-finger-r5: #b8431f;
+
+  --color-finger-thumb: #8a8a92;
+}
+
+[data-theme='dark'] {
+  --color-bg: #121212;
+  --color-surface: #1c1c1f;
+  --color-text: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+  --color-border: #3f3f46;
+  --color-accent: #a78bfa;
+  --color-accent-fg: #121212;
+
+  --color-finger-l5: #1f7d73;
+  --color-finger-l4: #2a9d90;
+  --color-finger-l3: #3dbdae;
+  --color-finger-l2: #6fd8cb;
+
+  --color-finger-r2: #ffc4ad;
+  --color-finger-r3: #ff9d7a;
+  --color-finger-r4: #f27a4f;
+  --color-finger-r5: #d15b32;
+
+  --color-finger-thumb: #a6a6ae;
+}

@@ -1,1 +1,25 @@
 @import 'tailwindcss';
+@import './styles/theme.css';
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-fg: var(--color-accent-fg);
+
+  --color-finger-l5: var(--color-finger-l5);
+  --color-finger-l4: var(--color-finger-l4);
+  --color-finger-l3: var(--color-finger-l3);
+  --color-finger-l2: var(--color-finger-l2);
+  --color-finger-r2: var(--color-finger-r2);
+  --color-finger-r3: var(--color-finger-r3);
+  --color-finger-r4: var(--color-finger-r4);
+  --color-finger-r5: var(--color-finger-r5);
+  --color-finger-thumb: var(--color-finger-thumb);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
