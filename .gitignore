@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Vite build output
+dist/
+dist-ssr/
+*.local
+
+# Env files (no backend, but keep local overrides out of source control)
+.env
+.env.*
+!.env.example
+
+# Testing
+coverage/
+playwright-report/
+playwright/.cache/
+test-results/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
