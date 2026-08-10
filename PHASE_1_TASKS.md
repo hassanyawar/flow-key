@@ -37,14 +37,14 @@ Work top to bottom. Each task lists what it depends on and what "done" means. Do
 
 This is the highest-risk area for subtle bugs. Build and test it in isolation before any component uses it.
 
-- [ ] `normalizeKeydown(event)`: extracts `{ key, timestamp }` using `event.key` and `performance.now()`.
-- [ ] Ignore events where `ctrlKey`, `metaKey`, or `altKey` is true.
-- [ ] Ignore events where `event.repeat` is true.
-- [ ] Ignore events where `event.isComposing` is true.
-- [ ] `preventDefault()` on Space, Tab, Backspace, `/` while a round is active — verify this doesn't leak outside an active round (settings and stats screens must scroll/tab normally).
-- [ ] Keyboard layout detection via `navigator.keyboard.getLayoutMap()` with a graceful fallback to a user-selected layout (QWERTY default).
-- [ ] Finger-mapping table: every key on the supported layouts maps to one of the 9 `FingerId` values from the data model.
-- [ ] Unit tests: modifier-key rejection, key-repeat rejection, IME composition rejection, each supported layout's finger mapping, and the preventDefault scoping.
+- [x] `normalizeKeydown(event)`: extracts `{ key, timestamp }` using `event.key` and `performance.now()`.
+- [x] Ignore events where `ctrlKey`, `metaKey`, or `altKey` is true.
+- [x] Ignore events where `event.repeat` is true.
+- [x] Ignore events where `event.isComposing` is true.
+- [x] `preventDefault()` on Space, Tab, Backspace, `/` while a round is active — verify this doesn't leak outside an active round (settings and stats screens must scroll/tab normally).
+- [x] Keyboard layout detection via `navigator.keyboard.getLayoutMap()` with a graceful fallback to a user-selected layout (QWERTY default).
+- [x] Finger-mapping table: every key on the supported layouts maps to one of the 9 `FingerId` values from the data model.
+- [x] Unit tests: modifier-key rejection, key-repeat rejection, IME composition rejection, each supported layout's finger mapping, and the preventDefault scoping.
 
 **Done when:** all input unit tests pass, and manually mashing modifier keys, holding a key down, and typing with an IME active (if testable) all produce no false keystrokes.
 
