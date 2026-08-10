@@ -67,9 +67,9 @@ Pure TypeScript, no DOM or React imports. Write tests alongside each function.
 
 ## 5. Content: word packs (`src/content/`)
 
-- [ ] Source and include `google-10000-english` (or equivalent public-domain list) as `common-1k.json` and `common-5k.json`, each with the required `{ source, license, attribution, retrievedAt }` header.
-- [ ] Generate `home-row.json` programmatically (words restricted to `asdf jkl;`) rather than hand-curating.
-- [ ] Verify no file lacks the attribution header — add a lint or test step that fails the build if one is missing.
+- [x] Source and include `google-10000-english` (or equivalent public-domain list) as `common-1k.json` and `common-5k.json`, each with the required `{ source, license, attribution, retrievedAt }` header.
+- [x] Generate `home-row.json` programmatically (words restricted to `asdf jkl;`) rather than hand-curating.
+- [x] Verify no file lacks the attribution header — add a lint or test step that fails the build if one is missing.
 
 **Done when:** at least the home-row and common-1k packs exist, are licensed correctly, and are loadable by the generator from task 4.
 
