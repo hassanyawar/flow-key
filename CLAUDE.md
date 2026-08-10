@@ -41,8 +41,8 @@ This repo follows git-flow: `main` is releases only, `develop` is the integratio
 - One feature branch per task from `PHASE_1_TASKS.md` (or the equivalent numbered task in a later phase's task doc) — branch as `feature/<short-task-slug>`, e.g. `feature/project-scaffold`, `feature/input-handling`.
 - Don't lump multiple numbered tasks into one branch, even if they touch the same directory — the task doc's dependency ordering exists so each is independently reviewable and revertible.
 - Branch from `develop`, not `main`.
-- Once the task's "Done when" criteria pass (lint/typecheck/tests clean, per Code conventions above), merge the feature branch into `develop` yourself.
-- Do not push to `origin` and don't open PRs — the user pushes and syncs branches themselves.
+- **Never merge a feature branch into `develop` yourself, even locally.** Once the task's "Done when" criteria pass (lint/typecheck/tests clean, per Code conventions above), stop and tell the user the branch is finalized. They create and merge the PR themselves.
+- Do not push to `origin` — the user pushes and syncs branches themselves.
 - Commit message format is unchanged from the convention below (imperative mood, scoped prefix); this applies per-commit within a feature branch, not just at merge time.
 
 ## Testing expectations
